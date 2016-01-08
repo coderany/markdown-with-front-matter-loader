@@ -10,7 +10,7 @@ function parse(source) {
   return obj;
 }
 
-module.exports.parse = parse;
-module.exports["default"] = function(source) {
+module.exports = function(source) {
   return 'module.exports = ' + JSON.stringify(parse(source));
 }
+module.exports.parse = parse;
